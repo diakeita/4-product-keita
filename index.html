@@ -13,13 +13,469 @@
         <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- custom style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
     </head>
 
     <body>
-        
-        <h1>Hello World!</h1>
-<p>Hey there just testing netlify</p>
-        
+
+        <!-- top nav, desktop and tablet -->
+        <div class="w3-top">
+            <div class="w3-bar w3-theme">
+                <a href="https://www.google.com/maps/dir/''/gati+thai/@42.656782,-71.2102586,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89e308893cec5651:0xf8a9b3abb3a107ae!2m2!1d-71.1402187!2d42.6568033" target="_blank" class="w3-bar-item w3-button">Gati Thai Food</a>
+                <a href="#lunch-menu" class="w3-bar-item w3-button w3-hide-small">Lunch Menu</a>
+                <a href="#dinner-menu" class="w3-bar-item w3-button w3-hide-small">Dinner Menu</a>
+                <a href="https://gatithai.com/" target="_blank" class="w3-bar-item w3-button w3-hide-small">Order Online</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="topNav()">&#9776;</a>
+            </div> 
+            <div id="mobileTopNav" class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium">
+                <a href="#lunch-menu" class="w3-bar-item w3-button">Lunch Menu</a>
+                <a href="#dinner-menu" class="w3-bar-item w3-button">Dinner Menu</a>
+                <a href="#order-online" class="w3-bar-item w3-button">Order Online</a>
+            </div>
+        </div>
+
+        <!-- top nav, mobile -->
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">EAT</span>
+            </div>
+        </div>
+
+        <!-- Container (About Section) -->
+        <div class="w3-padding-64" id="about">
+
+            <div class="w3-row w3-middle w3-container">
+                <h1>About</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2-l2">
+                            <h3>Address</h3> 
+                            <p>12 Post Office Ave, Andover, MA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2-l2">
+                            <h3>Phone Number</h3>
+                            <h3>978-409-1352</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2-l2">
+                            <h3>Hours</h3> 
+                            <h6>Mon–Thu: 11:30am–9:00pm
+                                Fri:	11:30am–9:30pm
+                                Sat:	12:00pm–9:30pm
+                                Sun:	4:30am–9:00pm</h6>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- First Parrallax Image with Logo Text -->
+
+            <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
+            </div>
+
+
+            <!-- Container (Training Section) -->
+            <div class="w3-padding-64" id="lunch-menu">
+
+                <div class="w3-row w3-container">
+                    <h1>Lunch Menu</h1>
+                </div>
+
+                <div class="w3-row">
+                    <div class="w3-half">
+                        <div class="w3-card">
+                            <img src="/img/gatiproduct1.jpg" class="w3-image" alt="gati-product">
+
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <button onclick="accordion('appetizers')" class="w3-btn w3-block w3-theme-l1 w3-left-align w3-border">Appetizers<i class="fa fa-caret-down w3-right w3-xlarge"></i>
+                        </button>
+                        <div id="appetizers" class="w3-container w3-hide w3-theme2-l4">
+                            <h3>Apps</h3>
+                            <h5>Crispy Spring Rolls</h5>
+                            <p>Fried vegetable spring roll stuffed with taro, carrot, cabbage, served with sweet chili sauce</p>
+                            <h6>$5.95</h6>
+
+                            <h5>Nah Tang (Rice cracker dip)</h5>
+                            <p>Chopped chicken and shrimp, coconut milk, peanut, cilantro dipping sauce, served with crispy rice crackers</p>
+                            <h6>$7.95</h6>
+
+                            <h5>Fried Calamari</h5>
+                            <p>Fried battered calamari served with spicy mayonnaise</p>
+                            <h6>$6.95</h6>
+
+                            <h5>Spicy Thai Wings ★</h5>
+                            <p>Fried chicken wing, tossed with spicy Sriracha garlic sauce</p>
+                            <h6>$6.95</h6>
+
+                            <h5>Steamed Bun</h5>
+                            <p>Sandwich stuffed with lettuce, cucumber, scallion, Asian sausage, and cilantro with homemade plum sauce</p>
+                            <h6>$5.95</h6>
+
+                            <h5>Chicken Satay</h5>
+                            <p>Grilled marinated chicken tender on skewer, served with peanut sauce, cucumber salad, and toasted bread</p>
+                            <h6>$7.95</h6>
+
+                            <h5>Crab Rangoon</h5>
+                            <p>Fried wonton stuffed with crab meat, scallion, onion, carrot , cream cheese served with sweet and sour sauce</p>
+                            <h6>$6.95</h6>
+
+                            <h5>Dumpling</h5>
+                            <p>Steamed or pan fried pork & leeks dumpling served with garlic soy sauce</p>
+                            <h6>$6.95</h6>
+
+                            <h5>Thai Lettuce Wrap</h5>
+                            <p>Crispy vermicelli topped with minced chicken, minced shrimp, and chopped vegetables in a sweet and sour sauce served on lettuce.</p>
+                            <h6>$6.95</h6>
+
+                            <h5>Grilled Pork or Beef ★</h5>
+                            <p>Grilled marinated pork or beef, served with spicy chili lime sauce</p>
+                            <h6>$7.95</h6>
+
+                            <h5>Fresh Summer Roll</h5>
+                            <p>Lettuce, carrot, mint, rice vermicelli wrapped in rice paper served with house peanut sauce.</p>
+                            <h6>$5.95</h6>
+
+                        </div>
+
+                        <button onclick="accordion('soups')" class="w3-btn w3-block w3-theme-l1 w3-left-align">Soups<i class="fa fa-caret-down w3-right w3-xlarge"></i></button>
+
+                        <div id="soups" class="w3-container w3-hide w3-theme2-l4 ">
+                            <h3>Soups</h3>
+
+                            <h5>Tom Yum ★</h5>
+                            <p>Choice of chicken, shrimp or tofu in hot and sour broth with mushroom, tomato, cilantro</p>
+                            <h6>$4.95</h6>
+
+                            <h5>Tom Kha</h5>
+                            <p>Choice of chicken, shrimp or tofu in coconut broth with oyster mushroom, scallion, cilantro</p>
+                            <h6>$4.95</h6>
+
+                            <h5>Rice soup</h5>
+                            <p>Choice of chicken, shrimp or tofu in clear broth with jasmine rice, celery, cilantro, ginger, fried garlic, white pepper</p>
+                            <h6>$4.95</h6>
+
+                            <h5>Vegetable Soup</h5>
+                            <p>Napa, snap pea, mushroom, steamed tofu, fried garlic and white pepper in vegetarian broth</p>
+                            <h6>$4.95</h6>
+
+                        </div>
+
+                        <button onclick="accordion('salads')" class="w3-btn w3-block w3-theme-l1 w3-left-align">Salads<i class="fa fa-caret-down w3-right w3-xlarge"></i></button>
+
+                        <div id="salads" class="w3-container w3-hide w3-theme2-l4">
+                            <h3>Salads</h3>
+
+                            <h5>Green Papaya salad ★</h5>
+                            <p>Grilled shrimp, shredded green papaya, tomato, peanut, chili lime juice</p>
+                            <h6>$9.95</h6>
+
+                            <h5>Larb ★</h5>
+                            <p>Choice of minced chicken or fried tofu with red onion, ground roasted rice powder, cilantro, scallion, tossed in chili lime juice</p>
+                            <h6>$10.95</h6>
+
+                            <h5>Salad kaag</h5>
+                            <p>Chicken satay, sliced fried tofu, boiled egg, spring mix, tomato, cucumber, mint, peanut sauce dressing</p>
+                            <h6>$8.95</h6>
+
+                            <h5>Grilled Pork Salad</h5>
+                            <p>Grilled pork, red onion, roasted rice powder, cilantro, scallion, tossed in chili lime dressing</p>
+                            <h6>$11.95</h6>
+
+                        </div>
+
+                        <button onclick="accordion('lunch-special')" class="w3-btn w3-block w3-theme-l1 w3-left-align">Lunch Special<i class="fa fa-caret-down w3-right w3-xlarge"></i></button>
+
+                        <div id="lunch-special" class="w3-container w3-hide w3-theme2-l4">
+                            <h3>Lunch Special</h3>
+                            <h4>Chicken, Tofu $8.95     Shrimp, Beef $10.95     Duck, Seafood $12.95</h4>
+
+                            <h5>Cashew nut</h5>
+                            <p>Cashew nut, mushroom, onion, bell pepper, fresh pineapple, scallion, Thai chili pasted</p>
+
+
+                            <h5>Eggplant and basil</h5>
+                            <p>Eggplant, pepper, basil, roasted garlic, white pepper</p>
+
+
+                            <h5>Garlic and white pepper</h5>
+                            <p>Stir-fried choice of meat or vegetables with garlic, onion, mushroom and scallion</p>
+
+
+                            <h5>Snap pea and Shiitake mushroom</h5>
+                            <p>snap pea, onion, carrot, bell pepper, Shiitake mushroom and cashew nut</p>
+
+
+                            <h5>Basil and Chili ★</h5>
+                            <p>Chili, garlic, basil, bell pepper, onion, green bean</p>
+
+
+                            <h5>Sweet and Sour</h5>
+                            <p>Tomato, fresh pineapple, onion, bell pepper, scallion, zucchini, squash, cucumber</p>
+
+
+                            <h5>Broccoli and mushroom</h5>
+                            <p>Broccoli, mushroom, carrot sauteed in brown sauce</p>
+
+
+                            <h5>Mix vegetable</h5>
+                            <p>Broccoli, carrot, zucchini, squash, cucumber, snap pea, bell pepper, string bean sauteed in brown sauce</p>
+
+
+                            <h5>Pineapple curry</h5>
+                            <p>Yellow curry, snap pea, onion, tomato, fresh pineapple</p>
+
+
+                            <h5>Pad thai</h5>
+                            <p>Rice noodle, bean sprouts, Asian chive, peanut, spiced tofu, turnip, egg</p>
+
+
+                            <h5>Pad see ew</h5>
+                            <p>Wide rice noodle, Chinese broccoli, egg, garlic, white pepper</p>
+
+
+                            <h5>Tom yum noodle soup</h5>
+                            <p>Rice noodle, bean sprout, scallion, fried garlic, cilantro, fried wonton, peanut, chilli, spicy tomyum broth</p>
+
+
+                            <h5>Clear noodle soup</h5>
+                            <p>Rice noodle, bean sprout, scallion, fried garlic, cilantro, fried wonton, clear chicken broth</p>
+
+
+                            <h5>Street fried rice</h5>
+                            <p>Jasmine rice, chinese broccoli, egg, tomato, onion, scallion</p>
+
+
+                            <h5>Pineapple fried rice</h5>
+                            <p>Fresh pineapple, egg, green pea, tomato, raisin, carrot, curry powder, cashew nut</p>
+
+                            <h5>Basil fried rice</h5>
+                            <p>Bell pepper, onion, green bean, basil</p>
+
+                            <h5>Red curry</h5>
+                            <p>Red curry, bell pepper, eggplant, bamboo shoot</p>
+
+                            <h5>Jungle curry</h5>
+                            <p>Chili pasted, string bean, bamboo shoot, bell pepper</p>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Second Parallax Image with Logo Text -->
+            <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
+            </div>
+
+
+            <!-- Container (Teams Section) -->
+            <div class="w3-padding-64" id="dinner-menu">
+
+                <div class="w3-row w3-container">
+                    <h1>Dinner Menu</h1>
+                </div>
+
+                <div class="w3-row">
+                    <div class="w3-half">
+                        <div class="w3-card w3-center">
+                            <img src="/img/gatiproduct5.jpg" class="w3-image w3-center" alt="Thai food dinner">
+                        </div>
+                    </div>
+                    <div class="w3-half">
+
+                        <button onclick="accordion('chef-specials')" class="w3-btn w3-block w3-theme-l1 w3-left-align w3-border">Chef Specials<i class="fa fa-caret-down w3-right w3-xlarge"></i>
+                        </button>
+                        <div id="chef-specials" class="w3-container w3-hide w3-theme-l5">
+                            <h3>Chef Specials</h3>
+                            <h4>All entrees except noodle are served with jasmine rice. Substitute brown rice or sticky rice for $1.50</h4>
+
+                            <h5>Khao soi chicken or beef ★</h5>
+                            <p>Braised chicken or beef, egg noodle, coconut curry, preserved mustard green, cilantro, garlic chili oil</p>
+                            <h6>$13.95</h6>
+
+                            <h5>Chicken or Beef massaman curry ★</h5>
+                            <p>Braised chicken or beef, potato, onion, peanut, massaman curry</p>
+                            <h6>$15.95</h6>
+
+                            <h5>Mango Duck ★</h5>
+                            <p>Crispy duck, fresh mango, mushroom, onion, bell pepper, scallion, Thai chili paste, cashew nut</p>
+                            <h6>$17.95</h6>
+
+                            <h5>Grilled beef green curry ★</h5>
+                            <p>Grilled beef green curry, Thai eggplant, basil, bell pepper, carrot, bamboo shoot</p>
+                            <h6>$15.95</h6>
+
+                            <h5>Chili salmon ★</h5>
+                            <p>Wood grilled salmon, chili sauce, basil, bell pepper</p>
+                            <h6>$19.95</h6>
+
+                            <h5>Pla pad kun chai</h5>
+                            <p>Haddock or seasonal white fish filet lightly battered, chinese celery, ginger, lemongrass, shallot, chili</p>
+                            <h6>$19.95</h6>
+
+                            <h5>Shrimp pad pong garee ★</h5>
+                            <p>Shrimp, onion, scallion, egg, yellow curry, bell pepper, carrot, cilantro</p>
+                            <h6>$16.95</h6>
+
+                            <h5>Tamarind duck</h5>
+                            <p>Crispy duck, bell pepper, onion, mushroom, green pea, pineapple, carrot, tamarind sauce</p>
+                            <h6>$19.95</h6>
+
+                            <h5>The Original Pad Thai</h5>
+                            <p>Rice noodle, bean sprout, asian chive, peanut, spiced tofu, turnip, egg, Shrimp, Shrimp paste</p>
+                            <h6>$13.95</h6>
+
+                        </div>
+
+                        <button onclick="accordion('noodles-and-rice')" class="w3-btn w3-block w3-theme-l1 w3-left-align">Noodles and Rice<i class="fa fa-caret-down w3-right w3-xlarge"></i></button>
+
+                        <div id="noodles-and-rice" class="w3-container w3-hide w3-theme-l5">
+                            <h3>Noodles and Rice</h3>
+                            <h4>Chicken, tofu, vegetable $11.95   Chicken and Shrimp $12.95   Shrimp or Beef $13.95   Duck or Seafood $15.95</h4>
+                            <h5>For all fried rice dishes, substitute brown rice for $1.00</h5>
+
+                            <h5>Pad thai</h5>
+                            <p>Rice noodle, bean sprouts, Asian chive, peanut, spiced tofu, turnip, egg</p>
+
+                            <h5>Pad see ew</h5>
+                            <p>Wide rice noodle, Chinese broccoli, egg, garlic, white pepper</p>
+
+                            <h5>Pad kee mow ★</h5>
+                            <p>Wide rice noodle, onion, green bean, basil, bell pepper, bamboo, egg</p>
+
+                            <h5>Kua Gai</h5>
+                            <p>Wide rice noodle, scallion, egg, lettuce</p>
+
+                            <h5>Tom yum noodle soup ★</h5>
+                            <p>Rice noodle, bean sprout, scallion, fried garlic, cilantro, fried wonton, peanut, chilli, spicy tomyum broth</p>
+
+                            <h5>Noodle soup</h5>
+                            <p>Rice noodle, bean sprout, scallion, fried garlic, cilantro, fried wonton, clear chicken broth</p>
+
+                            <h5>Street fried rice</h5>
+                            <p>Chinese broccoli, egg, tomato, onion, carrots, scallion</p>
+
+                            <h5>Basil fried rice ★</h5>
+                            <p>Bell pepper, onion, green bean, basil</p>
+
+                            <h5>Pik Pow Fried Rice ★</h5>
+                            <p>Jasmine rice, egg, bell pepper, onion, carrot, chili paste</p>
+
+                            <h5>Mango fried rice</h5>
+                            <p>Jasmine rice, fresh mango, egg, snap pea, carrot, onion, scallion</p>
+
+                            <h5>Basil fried rice</h5>
+                            <p>Jasmine rice, egg, bell pepper, onion, green bean, basil</p>
+
+                            <h5>Pineapple fried rice</h5>
+                            <p>Jasmine rice, fresh pineapple, egg, green pea, tomato, raisin, carrot, curry powder, cashew nut</p>
+
+
+                        </div>
+
+
+                    </div>
+            
+
+                </div>
+
+            </div>
+
+            <div class="w3-bar w3-theme">
+                <button class="w3-bar-item w3-button" onclick="openTab('on-the-side')">On the side</button>
+                <button class="w3-bar-item  w3-button" onclick="openTab('beverages')">Beverages</button>
+                <button class="w3-bar-item  w3-button" onclick="openTab('desserts')">Desserts</button>
+            </div>
+
+            <div id="on-the-side" class="tab w3-container">
+                <h2>On the side </h2>
+                <h3>Jasmine rice</h3>
+                <h4>$2.00</h4>
+                <h3>Brown rice</h3>
+                <h4>$2.50</h4>
+                <h3>Sticky rice</h3>
+                <h4>$4.50</h4>
+                <h3>Crispy egg noodle</h3>
+                <h4>$2.50</h4>
+                <h3>Steamed rice noodle</h3>
+                <h4> $2.50</h4>
+                <h3>Boiled / Fried egg</h3>
+                <h4>$2.50</h4>
+                <h3> Steamed veggie</h3>
+                <h4>$5.95</h4>
+            </div>
+
+            <div id="beverages" class="tab w3-container" style="display:none">
+                
+                <h3>Thai Ice Tea / Thai Ice Coffee</h3>
+                <h4>$3.50</h4>
+                 
+                <h3>Fresh Limeade / Thai Lime Ice Tea</h3>
+                <h4>$3.50</h4>
+                  
+                <h3>Coke, Diet Coke, Sprite, Ginger Ale</h3>
+                <h4>$1.95</h4>
+                
+                <h3>Hot Thai tea</h3>
+                <h4>$2.95</h4>
+                 
+                <h3>French press coffee</h3>
+                <h4>$2.95</h4>
+                 
+                <h3>Hot Tea</h3>
+                <h4>$2.50</h4>
+                
+            </div>
+
+            <div id="desserts" class="tab w3-container" style="display:none">
+                <h3>Coconut ice cream</h3>
+                <h4>$4.95</h4>
+                <h3>Ginger ice cream</h3>
+                <h4>$4.95</h4>
+            </div>
+            
+            <div class="w3-container">
+            <h3>Before placing your order, please inform your server if a person in your party has a food allergy.
+
+* Consuming raw or uncooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.
+
+Menu subject to change</h3>
+            </div>
+    
+        </div>
+        <script src="js/topNav.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/tabs.js"></script>
     </body>
 
 </html>
